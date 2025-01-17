@@ -1,9 +1,7 @@
 from git import Repo
-import os
 from datetime import datetime
-import logging
-import sys
 import schedule
+import time
 
 local_repo = "/Users/jordankanius/automation/automated_update"
 commit_message = f"daily update completed on {datetime.now()}"
@@ -27,12 +25,13 @@ def git_upload():
 
         origin = repo.remote(name='origin')
         origin.push()
-        print('changes pushed')
+        print(f'changes pushed at {datetime.now()}')
     else:
         print('no changes to push')
        
-schedule.every().day.at("09:32").do(current_date)
-schedule.every().day.at("09:32").do(git_upload)
+schedule.every().day.at("13:22").do(current_date)
+schedule.every().day.at("13:22").do(git_upload)
 
 while True:
     schedule.run_pending()
+    #time.sleep(3600)
