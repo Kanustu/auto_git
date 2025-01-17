@@ -31,8 +31,8 @@ def git_upload():
     else:
         print('no changes to push')
        
-schedule.every().day.at("09:25").do(current_date)
-schedule.every().day.at("09:25").do(git_upload)
+schedule.every().day.at("09:32").do(current_date)
+schedule.every().day.at("09:32").do(git_upload)
 
 while True:
     schedule.run_pending()
