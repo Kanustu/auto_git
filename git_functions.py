@@ -1,9 +1,9 @@
+import os
 from git import Repo
 from datetime import datetime
 
-#Local Repo Path
-local_repo = "/Users/jordankanius/automation/automated_update"
-
+# Get repo path from environment variable, with fallback
+local_repo = os.getenv('GIT_REPO_PATH')
 #Function to update the date file
 def current_date():
     file_path = "date.txt"
