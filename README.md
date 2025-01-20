@@ -27,3 +27,8 @@ git clone https://github.com/Kanustu/automated_update.git
 ```bash session
 cd automated_update
 ```
+
+2. Install required dependencies:
+```bash session
+pip install -r requirements.txt
+```
