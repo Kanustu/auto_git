@@ -22,7 +22,7 @@ A Python-based automation tool that performs scheduled updates to a Git reposito
 
 1. Clone this repository:
 ```bash session
-git clone [your-repo-url]
+git clone https://github.com/Kanustu/automated_update.git
 ```
 ```bash session
 cd automated_update
