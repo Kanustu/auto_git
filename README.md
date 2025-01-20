@@ -23,4 +23,5 @@ A Python-based automation tool that performs scheduled updates to a Git reposito
 1. Clone this repository:
 ```bash
 git clone [your-repo-url]
-cd automated_update```
+cd automated_update
+```
