@@ -1,6 +1,17 @@
 import os
 from git import Repo
 from datetime import datetime
+import logging
+
+#Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('automation.log'),
+        logging.StreamHandler()
+    ]
+)
 
 # Get repo path from environment variable, with fallback
 local_repo = os.getenv('GIT_REPO_PATH')
@@ -10,7 +21,7 @@ def current_date():
     content = f"File updated on {datetime.now()}"
     with open(file_path, 'w') as file:
         file.write(content)
-    print("file updated successfully")
+    
 
 #Function to commit and push changes to the remote repo
 def git_upload():
@@ -23,17 +34,19 @@ def git_upload():
         if repo.is_dirty():
             try:
                 repo.git.add('--all')
-                print('added')
+                
             
                 repo.index.commit(commit_message)
-                print('commited changes')
+                
 
                 origin = repo.remote(name='origin')
                 origin.push()
-                print(f'changes pushed at {datetime.now()}')
+                
             except Exception as e:
                 print(f"Error during git operations: {str(e)}")
+                logging.error(f"Error during git operations: {str(e)}")
         else:
             print('no changes to push')
     except Exception as e:
         print(f"Error accessing repository at {local_repo}: {str(e)}")
+        logging.error(f"Error accessing repository at {local_repo}: {str(e)}")

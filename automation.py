@@ -24,7 +24,6 @@ def main():
     """Main function to set up and run the automation schedule"""
     logging.info("Starting automation script...")
     
-
     # Schedule jobs with error handling
     schedule.every(SCHEDULE_INTERVAL).hours.do(current_date)
     schedule.every(SCHEDULE_INTERVAL).hours.do(git_upload)
