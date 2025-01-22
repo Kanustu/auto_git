@@ -73,7 +73,7 @@ ps aux | grep "python automation.py"
 ```bash
 kill <PID>
 ```
-# or force stop if necessary
+or force stop if necessary:
 
 ```bash
 kill -9 <PID>
@@ -102,7 +102,8 @@ The script includes comprehensive error handling:
 
 ## License
 
-[Your chosen license]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## Contributing
 
