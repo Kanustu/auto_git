@@ -22,10 +22,10 @@ A Python-based automation tool that performs scheduled updates to a Git reposito
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/Kanustu/automated_update.git
+git clone https://github.com/Kanustu/auto_git.git
 ```
 ```bash
-cd automated_update
+cd auto_git
 ```
 
 2. Install required dependencies:
