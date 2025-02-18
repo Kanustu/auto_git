@@ -1,6 +1,6 @@
 # Auto_Git
 
-A Python-based automation tool that performs scheduled updates to a Git repository. This tool can be used for maintaining regular repository updates or keeping your GitHub contribution graph active.
+A Python-based automation tool that performs scheduled updates to a Git repository. This tool can be used for maintaining regular repository updates.
 
 ## Features
 
